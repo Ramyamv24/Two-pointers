@@ -1,8 +1,6 @@
 class Solution:
     def nextPermutation(self, nums: list[int]) -> None:
-        """
-        Do not return anything, modify nums in-place instead.
-        """
+        
         n = len(nums)
 
         # Step 1: Find the first decreasing element from the right (pivot)
@@ -17,7 +15,7 @@ class Solution:
                 j -= 1
             nums[i], nums[j] = nums[j], nums[i]
 
-        # Step 3: Reverse the suffix
+        
         left, right = i + 1, n - 1
         while left < right:
             nums[left], nums[right] = nums[right], nums[left]
@@ -25,7 +23,7 @@ class Solution:
             right -= 1
 
 
-# Main
+
 if __name__ == "__main__":
     nums = list(map(int, input("Enter elements separated by space: ").split()))
 
