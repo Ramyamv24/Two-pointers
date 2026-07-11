@@ -17,7 +17,7 @@ class Solution:
         return count
 
 
-# Main part
+
 s = input("Enter a string: ")
 
 sol = Solution()
